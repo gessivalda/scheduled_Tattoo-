@@ -10,7 +10,5 @@ data class Tattoo(
     var image: String,
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "tattoo_scheduled_dates", joinColumns = [JoinColumn(name = "tattoo_id")])
-    @Column(name = "scheduled_date")
-    var scheduledDates: MutableList<String> = mutableListOf()
+    var schedules: MutableList<Schedule> = mutableListOf()
 )
-

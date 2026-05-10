@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./mvnw clean *)",
+      "Bash(tasklist)",
+      "Bash(wmic process *)",
+      "Bash(powershell -Command \"Get-CimInstance Win32_Process -Filter \\\\\"name='java.exe'\\\\\" | Select-Object ProcessId,CommandLine | Format-List\")",
+      "Bash(./mvnw -DskipTests package)",
+      "Bash(taskkill //F //PID 31716 //PID 23620)",
+      "Bash(cd \"C:/Users/rodso/OneDrive/Área de Trabalho/scheduled Tattoo\" && ls target/classes/br/com/control/schedulingTattoo/config/ 2>&1 && rm -rf target 2>&1 && echo \"DELETED OK\")",
+      "Bash(./mvnw package *)",
+      "Bash(where psql *)",
+      "Bash(ls \"/c/Program Files/PostgreSQL/\" 2>&1 | head -5)",
+      "Bash(PGPASSWORD=postgres \"/c/Program Files/PostgreSQL/18/bin/psql.exe\" -h localhost -p 5432 -U postgres -d scheduling_tattoo -c \"DROP TABLE IF EXISTS tattoo_scheduled_dates CASCADE; DROP TABLE IF EXISTS tattoo CASCADE; DROP TABLE IF EXISTS users CASCADE; DROP TABLE IF EXISTS flyway_schema_history CASCADE;\")"
+    ]
+  }
+}
